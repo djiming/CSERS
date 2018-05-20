@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >  
+  
+<hibernate-mapping package="com.djming.csers.beans">  
+    <class name="User" table="user">  
+        <id name="ExamNumber" column="examNumber">
+        	<generator class="uuid" />
+        </id>  
+        <property name="IdNumber" column="idNumber" type="java.lang.String"  
+             length="18"/>  
+        <property name="password" column="password" type="java.lang.String"  
+             length="16" />
+        <property name="question" column="question" type="java.lang.String"  
+             length="255"/>  
+        <property name="answer" column="answer" type="java.lang.String"  
+             length="255" />
+        <property name="name" column="name" type="java.lang.String"  
+            length="255" />
+        <property name="gender" column="gender" type="java.lang.String"  
+            length="11" />
+        <property name="birthdata" column="birthdata" type="java.lang.String"  
+            length="255"/>
+        <property name="number" column="number" type="java.lang.String"  
+             length="25" />
+        <property name="province" column="province" type="java.lang.String"  
+             length="255" />
+        <property name="city" column="city" type="java.lang.String" 
+        	 length="255" />
+        <property name="education" column="education" type="java.lang.String" 
+        	 length="255" />  
+        <property name="image" column="image" type="java.lang.String" 
+        	 />
+        <property name="positionName" column="positionName" type="java.lang.String" 
+        	 />
+        	
+    </class>  
+</hibernate-mapping> 

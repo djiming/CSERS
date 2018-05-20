@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.2//EN"
+	"http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd"> 
+
+<validators>  
+    <!-- 添加对用户名的校验 -->  
+    <field name="user.IdNumber">  
+    	<field-validator type="requiredstring">  
+            <param name="trim">true</param>  
+            <message>身份证号不能为空</message>  
+        </field-validator>  
+        <field-validator type="regex">  
+            <param name="regexExpression"><![CDATA[(\w{18,18})]]></param>  
+            <message>身份证只能为十八位字母</message>  
+        </field-validator> 
+    </field>  
+      
+    <!-- 添加对密码的校验 -->  
+    <field name="user.password">  
+        <field-validator type="requiredstring">  
+            <param name="trim">true</param>  
+            <message>密码不能为空</message>  
+        </field-validator>  
+        <field-validator type="regex">  
+            <param name="regexExpression"><![CDATA[(\w{6,16})]]></param>  
+            <message>为了您账号的安全，请设置6个字母以上的密码（最长可设置16个字母）</message>  
+        </field-validator>  
+    </field>  
+</validators>  

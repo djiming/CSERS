@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="djming" namespace="/" extends="struts-default">
+        <action name="register" class="com.djming.csers.action.RegisterAction">
+            <result name="input">
+                /jsp/signup.jsp
+            </result>
+            <result name="success">
+                /jsp/Success.jsp
+            </result>
+            <result name="error">
+                /jsp/Fail.jsp
+            </result>
+        </action>
+        
+        <action name="examregis" class="com.djming.csers.action.ExamRegisAction">
+            <result name="input">
+                /jsp/index.jsp
+            </result>
+            <result name="success">
+                /jsp/successexam.jsp
+            </result>
+            <result name="error">
+                /jsp/Fail.jsp
+            </result>
+        </action>
+        
+        <action name="login" class="com.djming.csers.action.LoginAction">
+            <result name="input">
+                /jsp/login.jsp
+            </result>
+            <result name="success">
+                /jsp/userindex.jsp
+            </result>
+            <result name="error">
+                /jsp/Fail.jsp
+            </result>
+            <result name="Fail">
+                /jsp/Fail.jsp
+            </result>
+        </action>
+    </package>
+    <!-- Add packages here -->
+
+</struts>
